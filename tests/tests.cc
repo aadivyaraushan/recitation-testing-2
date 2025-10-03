@@ -95,7 +95,7 @@ TEST_CASE("WithDrawCash negative argument", "[wc-invalid-negative]") {
                     std::invalid_argument);
 }
 
-TEST_CASE("DepositCash negative amount", "[wc-deposit-cash]") {
+TEST_CASE("DepositCash negative amount addition", "[wc-deposit-cash]") {
   Atm atm;
   atm.RegisterAccount(12345678, 1234, "Sam Sepiol", 300.30);
   REQUIRE_THROWS_AS(atm.WithdrawCash(12345678, 1234, -100),
